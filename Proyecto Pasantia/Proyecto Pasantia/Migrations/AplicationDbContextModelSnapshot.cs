@@ -29,7 +29,7 @@ namespace Proyecto_Pasantia.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
-                    b.Property<string>("fechaNacimiento")
+                    b.Property<string>("libroFavorito")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
 

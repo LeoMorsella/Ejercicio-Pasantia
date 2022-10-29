@@ -14,7 +14,7 @@ namespace Proyecto_Pasantia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     nombre = table.Column<string>(type: "varchar(100)", nullable: false),
                     apellido = table.Column<string>(type: "varchar(100)", nullable: false),
-                    fechaNacimiento = table.Column<string>(type: "varchar(20)", nullable: false)
+                    libroFavorito = table.Column<string>(type: "varchar(20)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -9,7 +9,7 @@ using Proyecto_Pasantia;
 namespace Proyecto_Pasantia.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20221027203526_Inicial")]
+    [Migration("20221029154854_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,7 +31,7 @@ namespace Proyecto_Pasantia.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
-                    b.Property<string>("fechaNacimiento")
+                    b.Property<string>("libroFavorito")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
 

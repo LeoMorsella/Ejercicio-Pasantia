@@ -16,7 +16,7 @@ namespace Proyecto_Pasantia.Models
         public string apellido { get; set; }
         [Required]
         [Column(TypeName = "varchar(20)")]
-        public string fechaNacimiento { get; set; }
+        public string libroFavorito { get; set; }
 
 
     }
