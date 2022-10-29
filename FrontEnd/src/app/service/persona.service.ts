@@ -26,6 +26,29 @@ export class PersonaService {
     });
   }
 
+  obtenerPersonasFanDragonRojo(event:any) {
+    if(event.target.checked){
+      this.http.get(this.myAppUrl+this.myApiUrl+"GetFanDragonRojo").toPromise().then(data =>{
+        this.list = data as CargaPersona[]
+      });
+    }
+    else {
+      this.obtenerPersonas()
+    }
+    
+  }
+
+  obtenerPersonasFanJojo(event:any) {
+    if(event.target.checked){
+    this.http.get(this.myAppUrl+this.myApiUrl+"GetFanJojo").toPromise().then(data =>{
+      this.list = data as CargaPersona[]
+    });
+  }
+  else {
+    this.obtenerPersonas();
+  }
+  }
+
   actualizarPersona(id:number, persona:CargaPersona): Observable<CargaPersona> {
     return this.http.put<CargaPersona>(this.myAppUrl + this.myAppUrl + id, persona);
   }

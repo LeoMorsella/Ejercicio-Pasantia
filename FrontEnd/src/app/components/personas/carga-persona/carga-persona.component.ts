@@ -22,7 +22,7 @@ export class CargaPersonaComponent implements OnInit, OnDestroy {
       dni:0,
       nombre:['',[Validators.required]],
       apellido:['',[Validators.required]],
-      fechaNacimiento:['',[Validators.required]]
+      libroFavorito:['',[Validators.required]]
 
     })
    }
@@ -33,7 +33,7 @@ export class CargaPersonaComponent implements OnInit, OnDestroy {
     this.form.patchValue( {
       nombre: this.persona.nombre,
       apellido: this.persona.apellido,
-      fechaNacimiento: this.persona.fechaNacimiento
+      libroFavorito: this.persona.libroFavorito
     });
    
   });
@@ -52,7 +52,7 @@ export class CargaPersonaComponent implements OnInit, OnDestroy {
       //dni:this.form.get('dni')?.value,
       nombre:this.form.get('nombre')?.value,
       apellido:this.form.get('apellido')?.value,
-      fechaNacimiento:this.form.get('fechaNacimiento')?.value
+      libroFavorito:this.form.get('libroFavorito')?.value
 
     }
     this.personaService.guardarPersona(persona).subscribe(data => {
