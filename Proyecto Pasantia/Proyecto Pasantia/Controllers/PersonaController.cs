@@ -28,6 +28,22 @@ namespace Proyecto_Pasantia.Controllers
             return await _context.persona.ToListAsync();
         }
 
+        [HttpGet("GetFanDragonRojo")]
+        public async Task<ActionResult<IEnumerable<Persona>>> GetFanDragonRojo()
+        {
+            var personas = await _context.persona.ToListAsync();
+            var personasConNombre = personas.ToArray().Where(p => p.libroFavorito == "Dragon Rojo").ToList();
+            return personasConNombre;
+        }
+
+        [HttpGet("GetFanJojo")]
+        public async Task<ActionResult<IEnumerable<Persona>>> GetFanJojo()
+        {
+            var personas = await _context.persona.ToListAsync();
+            var personasConNombre = personas.ToArray().Where(p => p.libroFavorito == "Jojo").ToList();
+            return personasConNombre;
+        }
+
         // GET: api/Persona/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Persona>> GetPersona(int id)
