@@ -1,0 +1,19 @@
+<table class = "table table-sm">
+    <tr>
+        <th >Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha Nacimiento</th>
+    </tr>
+<tr *ngFor="let persona of personaService.list ">
+    <td>{{persona.dni}}</td>
+    <td>{{persona.nombre}}</td>
+    <td>{{persona.apellido}}</td>
+    <td>{{persona.fechaNacimiento}}</td>
+    
+    <td>
+        <button type="submit" (click)="eliminarPersona(persona.dni!)" > Borrar</button>
+        
+    </td>
+</tr>
+</table>

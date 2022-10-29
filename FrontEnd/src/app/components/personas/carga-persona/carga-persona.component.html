@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="guardarPersona()">
+    <div class="form-group">
+        
+        <div class="input-group">
+            <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" formControlName="apellido" placeholder="Apellido">
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" formControlName="fechaNacimiento" placeholder="Fecha de Nacimiento">
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" [disabled]="form.invalid" type="submit"> Aceptar</button>
+    </div>
+</form>
